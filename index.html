@@ -7,8 +7,15 @@
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs>
 
+          <!-- 3Dモデル（gltfファイル） -->
+          <a-assets>
+            <a-asset-items id="uzi1" src="asset/uziteru01/uziteru4.glb" ></a-asset-items>
+            console.log("モデル読み込み");
+            </a-assets>
+
         <!-- マーカーの指定 -->
         <a-marker type="pattern" url="pattern-uziteru.patt">
+          console.log("パターン認識");
 
           <!-- 表示するオブジェクトの設定 -->
          <!--
