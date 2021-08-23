@@ -6,14 +6,20 @@
 
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs>
+
+ 	<!-- 3DCGモデルの読み込み -->
+	<a-assets>
+	<a-asset-item id="uzi1" src="asset/uziteru01/uziteru.glb"></a-asset-item>
+	</a-assets>
+
         <!-- マーカーの指定 -->
-        <a-marker type="pattern" url="asset/uziteru01/pattern-uziteru_marker.patt">
-          <!-- 表示するオブジェクトの設定 -->
-        <a-entity id="glb" url="asset/uziteru01/uziteru.glb"
-	  scale="0.05 0.05 0.05" 
-          rotation="0 0 0">
-        </a-entity>
+        <a-marker type='pattern' url='asset/uziteru01/pattern-uziteru_marker.patt'>
+
+          <!-- 3DCGモデルの呼び出し -->
+      <a-gltf-model src="#uzi1"></a-gltf-model>
+
         </a-marker>
+
         <!-- カメラ -->
         <a-entity camera></a-entity>
         </a-scene>
