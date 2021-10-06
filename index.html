@@ -9,9 +9,18 @@
 <!-- シーンの追加とデバックUIを非表示 -->
 <a-scene embedded arjs="debugUIEnabled:false;">
 
+   <!-- 3DCGモデルの読み込み -->
+   <a-assets>
+    <a-asset-item id="uzi1" src="asset/uziteru01/uziteru4.glb"></a-asset-item>
+    <video src="asset/movie/PCrotate.mp4" id="ico" loop="ture"></video>
+  </a-assets>
+
+
+
+
   <!-- ② hiroマーカーでのソース -->
   <a-marker preset="hiro">
-    <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#111">
+    <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#f00">
       <a-animation attribute="position" to="0 1 0" direction="alternate" dur="2000" repeat="indefinite">
       </a-animation>
     </a-sphere>
@@ -19,12 +28,25 @@
 
 
   <!-- ③ 作成したマーカーでのソース -->
-  <a-marker type='pattern' url='pattern-marker1.patt'>
-    <a-entity obj-model="obj: url(13517_Beach_Ball_v2_L3.obj);
-          mtl: url(13517_Beach_Ball_v2_L3.mtl);" 
-          scale="0.05 0.05 0.05" 
-          rotation="0 0 0">
-  </a-marker>
+  <a-marker type='pattern' url='asset/uziteru01/pattern-marker1.patt'>
+    
+    <!--
+    <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#f00">
+    </a-sphere>
+  -->
+
+     <!-- 3DCGモデルの呼び出し -->
+     
+     <a-gltf-model src="#uzi1" scale="0.5 0.5 0.5"></a-gltf-model>
+  
+    </a-marker>
+
+  <a-marker type='pattern' url='asset/movie01/movie01.patt'>
+    
+       
+  <a-videosphere src='#ico'></a-videosphere>
+    
+    </a-marker>  
 
 
   <a-entity camera></a-entity>
