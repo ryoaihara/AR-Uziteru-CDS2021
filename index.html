@@ -18,9 +18,10 @@
   <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
 <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
  
-  <!-- OBJ形式のCGモデルの読み込み -->
+  <!-- glb形式のCGモデルの読み込み -->
   <a-assets>
-    <a-asset-item id="uzi-ho" src="asset/uziteru01/uziteru-f-ho.glb"></a-asset-item>   <!-- objファイル -->
+    <a-asset-item id="uzi-ho" src="asset/uziteru01/uziteru-f-ho.glb"></a-asset-item>   <!-- glbファイル -->
+    <a-asset-item id="uzi-WHand" src="asset/uziteru01/uziteru-f-wavehand.glb"></a-asset-item>   <!-- glbファイル -->
   </a-assets>
  
   <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
@@ -33,6 +34,13 @@
   <a-marker type="pattern" url="./asset/uziteru01/ho.patt">
     <!-- マーカーの場所に gltf 形式の 3DCG を置く -->
     <a-gltf-model src="#uzi-ho" animation-mixer scale="80 80 80">
+    </a-gltf-model>
+  </a-marker>
+
+  <!-- マーカーを登録（プリセットされている「人」マーカー） -->
+  <a-marker type="pattern" url="./asset/uziteru01/dou.patt">
+    <!-- マーカーの場所に gltf 形式の 3DCG を置く -->
+    <a-gltf-model src="#uzi-WHand" animation-mixer scale="80 80 80">
     </a-gltf-model>
   </a-marker>
  
