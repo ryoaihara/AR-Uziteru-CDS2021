@@ -16,7 +16,7 @@
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   
   <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
-<a-scene embedded arjs="debugUIEnabled:false;">
+<a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
  
   <!-- OBJ形式のCGモデルの読み込み -->
   <a-assets>
@@ -32,7 +32,7 @@
   <!-- マーカーを登録（プリセットされている「人」マーカー） -->
   <a-marker type="pattern" url="./asset/uziteru01/ho.patt">
     <!-- マーカーの場所に gltf 形式の 3DCG を置く -->
-    <a-gltf-model src="#uzi-ho" scale="100 100 100">
+    <a-gltf-model src="#uzi-ho" animation-mixer scale="80 80 80">
     </a-gltf-model>
   </a-marker>
  
