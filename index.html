@@ -21,7 +21,10 @@
   <!-- glb形式のCGモデルの読み込み -->
   <a-assets>
     <a-asset-item id="uzi-ho" src="asset/uziteru01/uziteru-f-ho.glb"></a-asset-item>   <!-- glbファイル -->
-    <a-asset-item id="uzi-WHand" src="asset/uziteru01/uziteru-f-wavehand.glb"></a-asset-item>   <!-- glbファイル -->
+    <a-asset-item id="uzi-kai" src="asset/uziteru01/uziteru-f-kai.glb"></a-asset-item>   <!-- glbファイル -->
+    <a-asset-item id="uzi-odo" src="asset/uziteru01/uziteru-f-odo.glb"></a-asset-item>   <!-- glbファイル -->
+    <a-asset-item id="uzi-rei" src="asset/uziteru01/uziteru-f-rei.glb"></a-asset-item>   <!-- glbファイル -->
+    <a-asset-item id="uzi-ten" src="asset/uziteru01/uziteru-f-ten.glb"></a-asset-item>   <!-- glbファイル -->
   </a-assets>
  
   <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
@@ -30,20 +33,77 @@
     <a-box position="0 0.5 0" wireframe="true"></a-box>
   </a-marker>
  
-  <!-- マーカーを登録（プリセットされている「人」マーカー） -->
+  <!-- マーカーを登録 -->
   <a-marker type="pattern" url="./asset/uziteru01/ho.patt">
     <!-- マーカーの場所に gltf 形式の 3DCG を置く -->
-    <a-gltf-model src="#uzi-ho" animation-mixer scale="100 100 100">
+    <a-gltf-model src="#uzi-ho" animation-mixer scale="200 200 200">
     </a-gltf-model>
   </a-marker>
 
-  <!-- マーカーを登録（プリセットされている「人」マーカー） -->
-  <a-marker type="pattern" url="./asset/uziteru01/dou.patt">
+  <!-- マーカーを登録 -->
+  <a-marker type="pattern" url="./asset/uziteru01/kai.patt">
     <!-- マーカーの場所に gltf 形式の 3DCG を置く -->
-    <a-gltf-model src="#uzi-WHand" animation-mixer scale="100 100 100">
+    <a-gltf-model src="#uzi-kai" animation-mixer scale="200 200 200">
     </a-gltf-model>
   </a-marker>
  
+  <!-- マーカーを登録 -->
+  <a-marker type="pattern" url="./asset/uziteru01/odo.patt">
+    <!-- マーカーの場所に gltf 形式の 3DCG を置く -->
+    <a-gltf-model src="#uzi-odo" animation-mixer scale="200 200 200">
+    </a-gltf-model>
+  </a-marker>
+
+  <!-- マーカーを登録 -->
+  <a-marker type="pattern" url="./asset/uziteru01/rei.patt">
+    <!-- マーカーの場所に gltf 形式の 3DCG を置く -->
+    <a-gltf-model src="#uzi-rei" animation-mixer scale="200 200 200">
+    </a-gltf-model>
+  </a-marker>
+
+  <!-- マーカーを登録 -->
+  <a-marker type="pattern" url="./asset/uziteru01/ten.patt">
+    <!-- マーカーの場所に gltf 形式の 3DCG を置く -->
+    <a-gltf-model src="#uzi-ten" animation-mixer scale="200 200 200">
+    </a-gltf-model>
+  </a-marker>
+
+  <!-- マーカーを登録 -->
+  <a-marker type="pattern" url="./asset/uziteru01/ho_mini.patt">
+    <!-- マーカーの場所に gltf 形式の 3DCG を置く -->
+    <a-gltf-model src="#uzi-ho" animation-mixer scale="50 50 50" rotation = "0 0 -90">
+    </a-gltf-model>
+  </a-marker>
+
+  <!-- マーカーを登録 -->
+  <a-marker type="pattern" url="./asset/uziteru01/kai_mini.patt">
+    <!-- マーカーの場所に gltf 形式の 3DCG を置く -->
+    <a-gltf-model src="#uzi-kai" animation-mixer scale="50 50 50" rotation = "0 0 -90">
+    </a-gltf-model>
+  </a-marker>
+ 
+  <!-- マーカーを登録 -->
+  <a-marker type="pattern" url="./asset/uziteru01/odo_mini.patt">
+    <!-- マーカーの場所に gltf 形式の 3DCG を置く -->
+    <a-gltf-model src="#uzi-odo" animation-mixer scale="50 50 50" rotation = "0 0 -90">
+    </a-gltf-model>
+  </a-marker>
+
+  <!-- マーカーを登録 -->
+  <a-marker type="pattern" url="./asset/uziteru01/rei_mini.patt">
+    <!-- マーカーの場所に gltf 形式の 3DCG を置く -->
+    <a-gltf-model src="#uzi-rei" animation-mixer scale="50 50 50" rotation = "0 0 -90">
+    </a-gltf-model>
+  </a-marker>
+
+  <!-- マーカーを登録 -->
+  <a-marker type="pattern" url="./asset/uziteru01/ten_mini.patt">
+    <!-- マーカーの場所に gltf 形式の 3DCG を置く -->
+    <a-gltf-model src="#uzi-ten" animation-mixer scale="50 50 50" rotation = "0 0 -90">
+    </a-gltf-model>
+  </a-marker>
+
+
   <!-- AR用のカメラを置く -->
   <a-entity camera></a-entity>
  
